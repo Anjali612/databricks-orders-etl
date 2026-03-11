@@ -11,3 +11,9 @@ steps:
 
 - script: pip install databricks-cli
   displayName: Install Databricks CLI
+- script: |
+    databricks workspace import_dir notebooks /Shared/orders_notebooks
+  displayName: Deploy Notebooks
+- script: |
+    databricks jobs run-now --job-id 22195036371193
+  displayName: Run Orders ETL Job  
