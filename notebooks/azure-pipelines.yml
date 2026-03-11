@@ -1,0 +1,13 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+- script: echo "Starting Orders ETL CI/CD Pipeline"
+  displayName: Start Pipeline
+
+- script: pip install databricks-cli
+  displayName: Install Databricks CLI
